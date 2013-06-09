@@ -9,3 +9,7 @@ class GutentexItem(Item):
     # define the fields for your item here like:
     # name = Field()
     pass
+
+class GutenbergItem(Item):
+    title = Field()
+    plain_text_url = Field()
