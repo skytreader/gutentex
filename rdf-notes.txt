@@ -1,0 +1,8 @@
+Apparently, gutenberg.org does not allow crawlers on its site. Curling a page from gutenberg shows
+a comment pointing to an rdf file for anyone who wants to trawl through gutenberg data (like me!).
+I have included the rdf file here.
+
+The rdf file isn't organized as I expected. The file has two parts: a bunch of `pgterms:etext`, which
+contains the "library catalog" data for a book, and then a bunch of `pgterms:file` which is what we
+are interested in---the actual ebook files. The `pgterms:etext` and `pgterms:file` is linked by
+rdf:ID (`pgterms:etext`) and rdf:resource (`pgterms:file`).

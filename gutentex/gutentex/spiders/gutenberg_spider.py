@@ -19,5 +19,6 @@ class GutenbergSpider(CrawlSpider):
         # But what if there are more than one h1s in the document?
         # Weird itemprop attribute in the gutenberg code.
         book["title"] = selector.select("//h1/text()").extract()
-        spam = selector.select("//a[@class='link']").extract()
-        print spam
+        book["links"] = selector.select("//a[@class='link']")
+        print "HEY SOUL SISTER"
+        return book
